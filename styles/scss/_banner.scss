@@ -1,0 +1,77 @@
+@use "variables" as *;
+
+.info {
+	margin-top: 100px;
+	min-height: 300px;
+	display: flex;
+	justify-content: space-evenly;
+	width: 90%;
+	margin-inline: auto;
+	text-align: center;
+
+	.info__title {
+		font-size: 9rem;
+		font-weight: 600;
+	}
+
+	.info__text {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+}
+
+.newsletter__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	padding-right: 2em;
+}
+
+.newsletter__title {
+	font-size: 2.75rem;
+	text-transform: uppercase;
+}
+
+.newsletter__text {
+	font-size: 1.15rem;
+}
+
+form {
+	.form__input-group {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 2rem;
+		width: 100%;
+	}
+
+	.form__input {
+		width: 400px;
+		margin-left: auto;
+		margin-right: 0;
+		border-radius: 10px 0 0 10px;
+		padding: 0.5em 1em;
+		border: none;
+		box-shadow: $form-inset;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.form__btn {
+		border-radius: 0 10px 10px 0;
+		border: none;
+		padding: 0.5em 1em;
+		margin-left: -5px;
+		box-shadow: $form-inset;
+		transition: $transition;
+
+		&:hover {
+			background-color: #dadada;
+		}
+	}
+}

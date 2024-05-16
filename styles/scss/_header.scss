@@ -1,0 +1,145 @@
+@use "variables" as *;
+
+header {
+	position: fixed;
+	width: 100vw;
+	height: 100px;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 4em;
+	z-index: 999;
+	background-color: transparent;
+}
+
+.header__logo-container {
+	width: 500px;
+	padding: 1.25em 1.75em 1.75em 4em;
+	border-radius: 0 50px 50px 0;
+	background-color: $bg-black-015;
+	backdrop-filter: blur(15px);
+	box-shadow: $box-backlight;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: $box-backlight--hover;
+	}
+}
+
+.header__logo {
+	max-width: 100%;
+	height: auto;
+	fill: $white;
+	height: auto;
+}
+
+.header__nav {
+	height: 60px;
+	padding: 1.25em 4em 1.25em 1.75em;
+	border-radius: 50px 0 0 50px;
+	background-color: $bg-black-015;
+	backdrop-filter: $blur;
+	box-shadow: $box-backlight--invertedX;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: $box-backlight--hover--invertedX;
+	}
+}
+
+.nav__mobile-menu-btn {
+	display: none;
+	background-color: transparent;
+	border: none;
+	color: $white;
+	font-size: 1.25rem;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.nav__list {
+	height: 100%;
+	display: flex;
+	list-style: none;
+	gap: 2em;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: $white;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	border-bottom: 2px solid transparent;
+	transition: $transition;
+
+	&:hover {
+		color: $white;
+		text-shadow: $button-text-backlight--hover;
+	}
+}
+
+header.scrolled {
+	background-color: $white;
+	border-bottom: 1px solid lightgray;
+	box-shadow: $extended-shadow;
+}
+
+header.scrolled .header__logo-container {
+	background-color: transparent;
+	backdrop-filter: blur(0);
+	box-shadow: 0;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: 0;
+	}
+}
+
+header.scrolled .header__logo {
+	fill: $black;
+}
+
+header.scrolled nav {
+	background-color: transparent;
+	backdrop-filter: $blur;
+	box-shadow: 0;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: 0;
+	}
+}
+
+header.scrolled .nav__link {
+	color: $black;
+	border-bottom: 2px solid transparent;
+	transition: $transition;
+	position: relative;
+
+	&:hover {
+		text-shadow: 0;
+
+		&::after {
+			width: 100%;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: -2px;
+		right: 0;
+		width: 0;
+		height: 2px;
+		background-color: $black;
+		transition: $transition;
+	}
+}

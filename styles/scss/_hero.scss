@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+/* !---> HERO <---! */
+#hero {
+	height: 100vh;
+	object-fit: cover;
+
+	& .carousel {
+		height: 100%;
+	}
+}
+
+.carousel__header {
+	font-size: 2.75rem;
+	transform: translateY(-100px);
+	letter-spacing: 2px;
+}

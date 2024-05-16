@@ -1,0 +1,169 @@
+@use "variables" as *;
+
+#technology {
+	width: 90%;
+	margin-inline: auto;
+}
+
+.technology__intro {
+	position: relative;
+	margin-bottom: 1.5em;
+	background-color: $black;
+	padding-block: 3rem 4rem;
+	border-radius: 15px;
+}
+
+.intro__video {
+	max-width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.intro__box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 45%;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 3em;
+	margin-left: 5%;
+}
+
+.intro__subtitle {
+	font-size: 1.5rem;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+.intro__stats-title {
+	font-weight: 700;
+}
+
+.technology__box {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1.5em;
+}
+
+.card {
+	flex: 1;
+	text-align: center;
+	min-height: 500px;
+	overflow: hidden;
+	background-color: $bg-gray;
+	backdrop-filter: blur(15px);
+	cursor: pointer;
+	border-color: lightgray;
+	box-shadow: $basic-box-shadow;
+}
+
+.card__image {
+	max-width: 100%;
+	height: auto;
+	transition: 400ms;
+	object-fit: cover;
+}
+
+.card__image-container {
+	overflow: hidden;
+	height: 100%;
+}
+
+.card:hover .card__image {
+	transform: scale(1.1);
+}
+
+.card__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1em;
+	height: 80%;
+}
+
+.card__title {
+	margin-top: 1rem;
+	font-size: 2.25rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.card__text {
+	font-size: 1rem;
+	text-align: start;
+}
+
+.modal-dialog {
+	border-radius: 15px;
+	overflow: hidden;
+	position: relative;
+}
+
+.modal__image-container {
+	width: 100%;
+}
+
+.modal__image {
+	max-width: 100%;
+	height: auto;
+}
+
+.modal__box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 45%;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 2em;
+	margin-left: 3rem;
+}
+
+.modal__title,
+.intro__title {
+	font-size: 3.1rem;
+	font-weight: bold;
+}
+
+.modal__text,
+.intro__text {
+	font-size: 1rem;
+}
+
+.modal__stats,
+.intro__stats {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 1em;
+	border-bottom: 2px solid grey;
+}
+
+.modal__btn-close {
+	position: absolute;
+	top: 0;
+	right: 1rem;
+	border: none;
+	background-color: transparent;
+	color: lightgray;
+	cursor: pointer;
+	font-size: 3rem;
+	font-weight: 300;
+	transition: 300ms;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+/* Prevent the page from shifting to the left when the modal opens */
+.modal-open[style] {
+	padding-right: 0px !important;
+}

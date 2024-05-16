@@ -1,0 +1,49 @@
+//colors
+$white: #ffffff;
+$black: #000000;
+$light-gray: #dadada;
+$bg-gray: hsla(0, 0%, 100%, 0.2);
+
+// Background-colors
+$bg-black-015: rgba(0, 0, 0, 0.15);
+$bg-black-03: rgba(0, 0, 0, 0.3);
+
+// Background images
+$bg-img-body: url("../../assets/images/background.svg");
+$bg-img-starbase: url("../../assets/images/starbase.jpg");
+
+//Box-Shadows
+$basic-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+
+$extended-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+$extended-shadow--invertedY: 0 -5px 20px rgba(0, 0, 0, 0.5);
+
+$basic-backlight: 0 0 20px rgba(255, 255, 255, 0.35);
+$box-backlight: 5px 0 10px rgba(255, 255, 255, 0.5);
+$box-backlight--invertedX: -5px 0 10px rgba(255, 255, 255, 0.5);
+$box-backlight--hover: 2px 0 10px rgba(255, 255, 255, 0.5), 2px 0 20px rgba(255, 255, 255, 0.5), 2px 0 30px rgba(255, 255, 255, 0.5),
+	inset 2px 0 10px rgba(255, 255, 255, 0.5);
+
+$box-backlight--hover--invertedX: -2px 0 10px rgba(255, 255, 255, 0.5), -2px 0 20px rgba(255, 255, 255, 0.5), -2px 0 30px rgba(255, 255, 255, 0.5),
+	inset -2px 0 10px rgba(255, 255, 255, 0.5);
+
+$button-backlight--hover: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5),
+	inset 0 0 10px rgba(255, 255, 255, 0.5);
+
+$form-inset: inset 0 0 4px rgba(0, 0, 0, 0.5);
+
+//Text-Shadows
+$button-text-backlight--hover: 0 0 10px rgba(255, 255, 255, 0.75), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5),
+	0 0 40px rgba(255, 255, 255, 0.5);
+
+$basic-text-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
+
+// Transition
+$transition: 250ms;
+
+// Blur
+$blur: blur(15px);
+$blur--50: blur(50px);
+
+// Boder-radius
+$base-border-radius: 15px;
