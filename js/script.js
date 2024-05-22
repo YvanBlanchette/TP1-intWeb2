@@ -19,7 +19,7 @@ let activated = false;
 
 // Scroll event listener
 window.addEventListener('scroll', () => {
-  if (pageYOffset > countersContainer.offsetTop - countersContainer.offsetHeight - 220 && !activated) {
+  if (pageYOffset > countersContainer.offsetTop - countersContainer.offsetHeight - 300 && !activated) {
     counters.forEach((counter) => {
       // Reset the counters
       counter.innerText = 0;

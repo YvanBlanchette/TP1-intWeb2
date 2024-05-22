@@ -1,55 +1,47 @@
 @use "variables" as *;
 
 .info {
-	margin-top: 100px;
-	min-height: 300px;
-	display: flex;
-	justify-content: space-evenly;
-	width: 90%;
-	margin-inline: auto;
+	@extend .container !optional;
+	@extend .flex-row-evenly;
+	margin-top: -80px;
+	margin-bottom: 40px;
 	text-align: center;
 
 	.info__title {
-		font-size: 9rem;
-		font-weight: 600;
+		font-size: $fs-9xl;
+		font-weight: $fw-bold;
 	}
 
 	.info__text {
-		font-size: 1.5rem;
-		font-weight: 600;
+		font-size: $fs-xl;
+		font-weight: $fw-bold;
 	}
 }
 
 .newsletter__box {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@extend .flex-column-center;
 	width: 100%;
 	padding-right: 2em;
 }
 
 .newsletter__title {
-	font-size: 2.75rem;
+	font-size: $fs-3xl;
 	text-transform: uppercase;
 }
 
 .newsletter__text {
-	font-size: 1.15rem;
+	font-size: $fs-lg;
 }
 
 form {
 	.form__input-group {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@extend .flex-row-center;
+		@extend container;
 		margin-top: 2rem;
-		width: 100%;
 	}
 
 	.form__input {
-		width: 400px;
+		width: $logo-width;
 		margin-left: auto;
 		margin-right: 0;
 		border-radius: 10px 0 0 10px;
@@ -73,5 +65,13 @@ form {
 		&:hover {
 			background-color: #dadada;
 		}
+	}
+}
+
+// !--> MEDIA QUERIES <--! //
+@media screen and (width < 1200px) {
+	.newsletter__box {
+		padding-right: 0;
+		padding-top: 2rem;
 	}
 }

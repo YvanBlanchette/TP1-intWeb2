@@ -1,3 +1,29 @@
+// Font-sizes
+$fs-xs: 0.5rem;
+$fs-sm: 0.75rem;
+$fs-md: 0.9rem;
+$fs-lg: 1rem;
+$fs-xl: 1.5rem;
+$fs-2xl: 2rem;
+$fs-3xl: 3rem;
+$fs-4xl: 4rem;
+$fs-5xl: 5rem;
+$fs-6xl: 6rem;
+$fs-7xl: 7rem;
+$fs-8xl: 8rem;
+$fs-9xl: 9rem;
+
+// Font-weights
+$fw-thin: 100;
+$fw-extraLight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semiBold: 500;
+$fw-bold: 600;
+$fw-extraBold: 700;
+$fw-black: 800;
+$fw-extraBlack: 900;
+
 //colors
 $white: #ffffff;
 $black: #000000;
@@ -42,8 +68,132 @@ $basic-text-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
 $transition: 250ms;
 
 // Blur
+$blur-none: none;
 $blur: blur(15px);
 $blur--50: blur(50px);
 
 // Boder-radius
 $base-border-radius: 15px;
+
+$rounded-right: 0 50px 50px 0;
+$rounded-left: 50px 0 0 50px;
+
+// header-height
+$header-height: 100px;
+
+//
+$logo-width: 500px;
+
+// !--> MEDIA QUERIES <--! //
+@media screen and (width < 992px) {
+	$header-height: 70px;
+
+	$fs-xl: 1.25rem;
+	$fs-3xl: 1.5rem;
+	$fs-9xl: 5rem;
+}
+
+@media screen and (width >=992px) and (width < 1200px) {
+	$logo-width: 375px;
+
+	$fs-3xl: 2rem;
+}
+
+@media screen and (width < 576px) {
+	$logo-width: 300px;
+
+	$fs-xl: 1rem;
+	$fs-9xl: 3.5rem;
+}
+
+// !--> Utilities <--! //
+.container {
+	display: block;
+	max-width: 80%;
+	margin-inline: auto;
+}
+
+%flex {
+	display: flex;
+}
+
+.flex-row {
+	@extend %flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	@extend %flex;
+	flex-direction: column;
+}
+
+.flex-row-start {
+	@extend .flex-row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flex-row-center {
+	@extend .flex-row;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-row-evenly {
+	@extend .flex-row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.flex-row-between {
+	@extend .flex-row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-row-end {
+	@extend .flex-row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.flex-column-start {
+	@extend .flex-column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flex-column-center {
+	@extend .flex-column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column-end {
+	@extend .flex-column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+// Positions
+%fixed {
+	position: fixed;
+}
+
+%absolute {
+	position: absolute;
+}
+
+.fixed-top {
+	@extend %fixed;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.absolute-right-0 {
+	@extend %absolute;
+	right: 0;
+	width: 0;
+}

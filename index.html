@@ -35,61 +35,54 @@
         </svg>
       </a>
     </div>
+    <div>
 
-    <nav class="header__nav">
-      <button class="nav__mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-      <ul class="nav__list">
-        <li class="nav__list-item"><a class="nav__link" href="#technology">Technologies</a></li>
-        <li class="nav__list-item"><a class="nav__link" href="#gallery">Gallerie</a></li>
-        <li class="nav__list-item"><a class="nav__link" href="#statistics">Statistiques</a></li>
-        <li class="nav__list-item"><a class="nav__link" href="#starbase">Starbase</a></li>
-        <li class="nav__list-item"><a class="nav__link" href="#contact">Nous Joindre</a></li>
-      </ul>
-    </nav>
+      <nav class="header__mobile-nav">
+        <button class="nav__mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </nav>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__list-item"><a class="nav__link" href="#technology">Technologies</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#gallery">Gallerie</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#statistics">Statistiques</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#starbase">Starbase</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#contact">Nous Joindre</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section id="hero">
-      <div id="carouselExampleCaptions" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="5000"
+      <div id="carousel" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="5000"
         class=" carousel slide carousel-fade">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="./assets/images/hero-1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-block">
               <h2 class="carousel__header">DÉVELOPPER LES TECHNOLOGIES NÉCESSAIRES</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img src="./assets/images/hero-2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-block">
               <h2 class="carousel__header">AFIN D'EXPLORER NOTRE SYSTÈME SOLAIRE</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img src="./assets/images/hero-3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-block">
               <h2 class="carousel__header">ET FAIRE DE L'HUMANITÉ UNE ESPÈCE MULTIPLANÉTAIRE</h2>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+
       </div>
     </section>
     <section id="banner-info">
@@ -451,7 +444,7 @@
     </div>
     <div class="footer__bar">
       <div class="bar__developper">
-        Conçu et développé par: Yvan junior Blanchette
+        Conçu et développé par: <a href="https://yvanblanchette.com" class="nav__link">Yvan junior Blanchette</a>
       </div>
       <div class="bar__socials">
         <ul class="bar__socials-list">
