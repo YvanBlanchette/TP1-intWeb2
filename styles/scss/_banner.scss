@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 #banner-info {
 	margin-bottom: 4rem;
@@ -6,7 +7,7 @@
 
 .info {
 	@extend .container;
-	@extend .flex-row-evenly;
+	@include flex(row, space-evenly, center);
 	margin-top: -80px;
 	margin-bottom: 40px;
 	text-align: center;
@@ -23,7 +24,7 @@
 }
 
 .newsletter__box {
-	@extend .flex-column-center;
+	@include flex(column, center, center);
 	width: 100%;
 	padding-right: 2em;
 }
@@ -42,7 +43,7 @@
 form {
 	.form__input-group {
 		@extend .container;
-		@extend .flex-row-center;
+		@include flex(row, center, center);
 		margin-top: 2rem;
 	}
 

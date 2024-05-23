@@ -10,6 +10,7 @@
 @use "contact" as *;
 @use "footer" as *;
 @use "message-confirmation" as *;
+@use "mixins" as *;
 
 *,
 *::before,
@@ -35,7 +36,7 @@ a {
 }
 
 body {
-	@extend .flex-column;
+	@include flex(column, center, center);
 	background-image: $bg-img-body;
 }
 

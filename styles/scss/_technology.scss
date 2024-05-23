@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 #technology {
 	width: 90%;
@@ -24,7 +25,7 @@
 }
 
 .intro__box {
-	@extend .flex-column-evenly;
+	@include flex(column, space-evenly, auto);
 	@extend .absolute-left;
 	width: 45%;
 	color: $white;
@@ -48,7 +49,7 @@
 }
 
 .intro__stats {
-	@extend .flex-row-between;
+	@include flex(row, space-between, center);
 	margin-block: 2.5rem;
 	padding-block: 0.5em;
 	border-bottom: 2px solid grey;
@@ -66,12 +67,12 @@
 }
 
 .card {
-	@extend .flex-column;
+	@include flex(column, flex-start, flex-start);
+	@include background(gray, 1);
 	flex: 1;
 	text-align: center;
 	min-height: 500px;
 	overflow: hidden;
-	background-color: $bg-gray;
 	backdrop-filter: $blur;
 	cursor: pointer;
 	border-color: lightgray;
@@ -94,7 +95,7 @@
 }
 
 .card__content {
-	@extend .flex-column-center;
+	@include flex(column, center, center);
 	padding: 1em;
 	height: 80%;
 }
@@ -127,7 +128,7 @@
 }
 
 .modal__box {
-	@extend .flex-column-evenly;
+	@include flex(column, space-evenly, auto);
 	@extend .absolute-left;
 	width: 50%;
 	color: $white;
@@ -149,7 +150,7 @@
 }
 
 .modal__stats {
-	@extend .flex-row-between;
+	@include flex(row, space-between, center);
 	padding-block: 0.5em;
 	border-bottom: 2px solid grey;
 	font-size: var(--fs-sm);

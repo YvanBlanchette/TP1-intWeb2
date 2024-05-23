@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .contact__map-container {
 	width: 100%;
@@ -13,10 +14,10 @@
 }
 
 .contact__box {
-	@extend .flex-column-center;
-	background-color: $bg-black-03;
+	@include flex(column, center, center);
+	@include background($black, 0.3);
 	backdrop-filter: $blur;
-	box-shadow: $box-backlight--hover--invertedX;
+	box-shadow: $box-backlight--invertedX;
 	border-radius: 15px 0 0 15px;
 	z-index: 100;
 	position: absolute;
@@ -44,7 +45,7 @@
 }
 
 #contact .contact__form {
-	@extend .flex-column-start;
+	@include flex(column, flex-start, flex-start);
 	width: 100%;
 
 	& .form__input-group {

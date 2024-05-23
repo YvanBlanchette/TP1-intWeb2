@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 #stats {
 	margin-bottom: 5rem;
@@ -12,15 +13,13 @@
 }
 
 .stats {
-	@extend .flex-row-between;
+	@include flex(row, space-between, flex-start);
 	flex-wrap: wrap;
-	align-items: flex-start;
 	margin-bottom: 5rem;
 }
 
 .stats__chart {
-	@extend .flex-row-start;
-	align-items: flex-start;
+	@include flex(row, flex-start, flex-start);
 	width: 40%;
 }
 
@@ -52,13 +51,12 @@
 }
 
 .stats__info {
-	@extend .flex-column-start;
-	justify-content: start;
+	@include flex(column, flex-start, flex-start);
 	width: 400px;
 }
 
 .stats__info-text {
-	@extend .flex-row-between;
+	@include flex(row, space-between, center);
 	font-size: var(--fs-2lg);
 	width: 120px;
 }

@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 footer {
 	background-color: $white;
@@ -62,12 +63,13 @@ footer {
 }
 
 .footer__bar {
-	@extend .flex-row-between;
+	@include flex(row, space-between, center);
 	background-color: lightgray;
 	padding: 1rem 4rem;
 
 	& .bar__socials-list {
-		@extend .flex-row-center;
+		@include flex(row, center, center);
+
 		gap: 1rem;
 		transform: translate(-3rem, 0.6rem);
 
@@ -83,7 +85,8 @@ footer {
 	}
 
 	& .bar__contact-text {
-		@extend .flex-row-end;
+		@include flex(row, flex-end, center);
+
 		font-size: var(--fs-xs);
 		gap: 1rem;
 	}

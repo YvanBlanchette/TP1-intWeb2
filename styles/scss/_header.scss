@@ -1,10 +1,10 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 header {
-	@extend .flex-row-between;
+	@include flex(row, space-between, center);
 	@extend .fixed-top;
 	background-color: transparent;
-
 	height: $header-height;
 	padding-block: 4rem;
 	z-index: 999;
@@ -12,10 +12,10 @@ header {
 
 // !---> NAVBAR LOGO <---! //
 .header__logo-container {
+	@include background($black, 0.15);
 	width: $logo-width;
 	padding: 1.25em 1.75em 1.75em 4em;
 	border-radius: $rounded-right;
-	background-color: $bg-black-015;
 	backdrop-filter: $blur;
 	box-shadow: $box-backlight;
 	transition: $transition;
@@ -34,10 +34,10 @@ header {
 
 // !---> NAVBAR MENU <---! //
 .header__nav {
+	@include background($black, 0.15);
 	height: 60px;
 	padding: 1.25em 4em 1.25em 1.75em;
 	border-radius: $rounded-left;
-	background-color: $bg-black-015;
 	backdrop-filter: $blur;
 	box-shadow: $box-backlight--invertedX;
 	transition: 700ms ease-out;
@@ -48,7 +48,7 @@ header {
 }
 
 .nav__list {
-	@extend .flex-row-end;
+	@include flex(row, flex-end, center);
 	height: 100%;
 	list-style: none;
 	gap: 2em;
@@ -120,8 +120,8 @@ header {
 	}
 
 	.header__nav {
+		@include background($black, 0.7);
 		flex-direction: column;
-		background-color: $bg-black-07;
 		box-shadow: none;
 		position: fixed;
 		inset: 0;

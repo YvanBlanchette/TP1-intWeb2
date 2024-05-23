@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 /* !---> HERO <---! */
 #hero {
@@ -8,7 +9,7 @@
 }
 
 .carousel__header {
-	@extend .flex-column-center;
+	@include flex(column, center, center);
 	font-size: var(--fs-3xl);
 	letter-spacing: 2px;
 	text-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.75);

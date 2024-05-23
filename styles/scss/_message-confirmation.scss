@@ -1,7 +1,8 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .message-container {
-	@extend .flex-column-center;
+	@include flex(column, center, center);
 	gap: 1rem;
 	position: absolute;
 	top: 50%;
