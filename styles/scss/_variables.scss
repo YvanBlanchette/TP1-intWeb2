@@ -1,17 +1,20 @@
-// Font-sizes
-$fs-xs: 0.5rem;
-$fs-sm: 0.75rem;
-$fs-md: 0.9rem;
-$fs-lg: 1rem;
-$fs-xl: 1.5rem;
-$fs-2xl: 2rem;
-$fs-3xl: 3rem;
-$fs-4xl: 4rem;
-$fs-5xl: 5rem;
-$fs-6xl: 6rem;
-$fs-7xl: 7rem;
-$fs-8xl: 8rem;
-$fs-9xl: 9rem;
+:root {
+	// Font-sizes
+	--fs-xs: 0.5rem;
+	--fs-sm: 0.75rem;
+	--fs-md: 0.9rem;
+	--fs-lg: 1rem;
+	--fs-2lg: 1.25rem;
+	--fs-xl: 1.5rem;
+	--fs-2xl: 2rem;
+	--fs-3xl: 3rem;
+	--fs-4xl: 4rem;
+	--fs-5xl: 5rem;
+	--fs-6xl: 6rem;
+	--fs-7xl: 7rem;
+	--fs-8xl: 8rem;
+	--fs-9xl: 9rem;
+}
 
 // Font-weights
 $fw-thin: 100;
@@ -33,6 +36,7 @@ $bg-gray: hsla(0, 0%, 100%, 0.2);
 // Background-colors
 $bg-black-015: rgba(0, 0, 0, 0.15);
 $bg-black-03: rgba(0, 0, 0, 0.3);
+$bg-black-07: rgba(0, 0, 0, 0.7);
 
 // Background images
 $bg-img-body: url("../../assets/images/background.svg");
@@ -74,6 +78,7 @@ $blur--50: blur(50px);
 
 // Boder-radius
 $base-border-radius: 15px;
+$border-radius-5: 5px;
 
 $rounded-right: 0 50px 50px 0;
 $rounded-left: 50px 0 0 50px;
@@ -81,36 +86,21 @@ $rounded-left: 50px 0 0 50px;
 // header-height
 $header-height: 100px;
 
-//
+// footer-height
+$footer-height: 100px;
+
+// logo-width
 $logo-width: 500px;
-
-// !--> MEDIA QUERIES <--! //
-@media screen and (width < 992px) {
-	$header-height: 70px;
-
-	$fs-xl: 1.25rem;
-	$fs-3xl: 1.5rem;
-	$fs-9xl: 5rem;
-}
-
-@media screen and (width >=992px) and (width < 1200px) {
-	$logo-width: 375px;
-
-	$fs-3xl: 2rem;
-}
-
-@media screen and (width < 576px) {
-	$logo-width: 300px;
-
-	$fs-xl: 1rem;
-	$fs-9xl: 3.5rem;
-}
 
 // !--> Utilities <--! //
 .container {
 	display: block;
-	max-width: 80%;
+	max-width: 85%;
 	margin-inline: auto;
+}
+
+.overflow-hidden {
+	overflow: hidden;
 }
 
 %flex {
@@ -169,6 +159,16 @@ $logo-width: 500px;
 	align-items: center;
 }
 
+.flex-column-evenly {
+	@extend .flex-column;
+	justify-content: space-evenly;
+}
+
+.flex-column-between {
+	@extend .flex-column;
+	justify-content: space-between;
+}
+
 .flex-column-end {
 	@extend .flex-column;
 	justify-content: center;
@@ -192,8 +192,48 @@ $logo-width: 500px;
 	right: 0;
 }
 
+.absolute-left {
+	@extend %absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
 .absolute-right-0 {
 	@extend %absolute;
 	right: 0;
 	width: 0;
+}
+
+// !--> MEDIA QUERIES <--! //
+@media screen and (width >=992px) and (width < 1200px) {
+	$logo-width: 375px;
+
+	:root {
+		--fs-3xl: 2.5rem;
+	}
+}
+
+@media screen and (width < 992px) {
+	$header-height: 70px;
+
+	:root {
+		--fs-xl: 1.25rem;
+		--fs-2xl: 1.5rem;
+		--fs-3xl: 1.75rem;
+		--fs-9xl: 5rem;
+	}
+}
+
+// !--> SMALL MOBILE PHONES <--! //
+@media screen and (width < 576px) {
+	$logo-width: 300px;
+
+	:root {
+		--fs-lg: 0.75rem;
+		--fs-xl: 0.9rem;
+		--fs-2xl: 1.5rem;
+		--fs-3xl: 1rem;
+		--fs-9xl: 2rem;
+	}
 }

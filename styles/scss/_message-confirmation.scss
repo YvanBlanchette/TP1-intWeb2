@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.message-container {
+	@extend .flex-column-center;
+	gap: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -80%);
+	text-align: center;
+}
+
+.message-btn {
+	background-color: lightgray;
+	border: none;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: $transition;
+	color: $black;
+	font-weight: $fw-semiBold;
+	text-decoration: none;
+	letter-spacing: 1px;
+
+	&:hover {
+		background-color: gray;
+		color: white;
+	}
+}

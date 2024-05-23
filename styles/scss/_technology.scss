@@ -3,6 +3,7 @@
 #technology {
 	width: 90%;
 	margin-inline: auto;
+	margin-bottom: 5rem;
 }
 
 .technology__intro {
@@ -10,33 +11,46 @@
 	margin-bottom: 1.5em;
 	background-color: $black;
 	padding-block: 3rem 4rem;
-	border-radius: 15px;
+	border-radius: $base-border-radius;
+	height: fit-content;
 }
 
 .intro__video {
 	max-width: 100%;
-	border-radius: 10px;
+	border-radius: $base-border-radius;
 	overflow: hidden;
 }
 
 .intro__box {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
+	@extend .flex-column-evenly;
+	@extend .absolute-left;
 	width: 45%;
 	color: $white;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
 	padding: 3em;
 	margin-left: 5%;
 }
 
+.intro__title {
+	font-size: var(--fs-3xl);
+	font-weight: bold;
+}
+
 .intro__subtitle {
-	font-size: 1.5rem;
-	margin-top: -10px;
+	font-size: var(--fs-xl);
+	margin-top: 0;
 	margin-bottom: 20px;
+}
+
+.intro__text {
+	font-size: var(--fs-2lg);
+}
+
+.intro__stats {
+	@extend .flex-row-between;
+	margin-block: 2.5rem;
+	padding-block: 0.5em;
+	border-bottom: 2px solid grey;
+	font-size: var(--fs-sm);
 }
 
 .intro__stats-title {
@@ -50,12 +64,13 @@
 }
 
 .card {
+	@extend .flex-column;
 	flex: 1;
 	text-align: center;
 	min-height: 500px;
 	overflow: hidden;
 	background-color: $bg-gray;
-	backdrop-filter: blur(15px);
+	backdrop-filter: $blur;
 	cursor: pointer;
 	border-color: lightgray;
 	box-shadow: $basic-box-shadow;
@@ -70,7 +85,6 @@
 
 .card__image-container {
 	overflow: hidden;
-	height: 100%;
 }
 
 .card:hover .card__image {
@@ -78,27 +92,25 @@
 }
 
 .card__content {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	@extend .flex-column-center;
 	padding: 1em;
 	height: 80%;
 }
 
 .card__title {
 	margin-top: 1rem;
-	font-size: 2.25rem;
+	font-size: var(--fs-2xl);
 	font-weight: bold;
 	letter-spacing: 1px;
 }
 
 .card__text {
-	font-size: 1rem;
+	font-size: var(--fs-lg);
 	text-align: start;
 }
 
 .modal-dialog {
-	border-radius: 15px;
+	border-radius: $base-border-radius;
 	overflow: hidden;
 	position: relative;
 }
@@ -113,37 +125,32 @@
 }
 
 .modal__box {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 45%;
+	@extend .flex-column-evenly;
+	@extend .absolute-left;
+	width: 50%;
 	color: $white;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
 	padding: 2em;
 	margin-left: 3rem;
 }
 
-.modal__title,
-.intro__title {
-	font-size: 3.1rem;
+.modal__title {
+	font-size: var(--fs-2xl);
 	font-weight: bold;
 }
 
-.modal__text,
-.intro__text {
-	font-size: 1rem;
+.modal__subtitle {
+	font-size: var(--fs-xl);
 }
 
-.modal__stats,
-.intro__stats {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-block: 1em;
+.modal__text {
+	font-size: var(--fs-lg);
+}
+
+.modal__stats {
+	@extend .flex-row-between;
+	padding-block: 0.5em;
 	border-bottom: 2px solid grey;
+	font-size: var(--fs-sm);
 }
 
 .modal__btn-close {
@@ -166,4 +173,35 @@
 /* Prevent the page from shifting to the left when the modal opens */
 .modal-open[style] {
 	padding-right: 0px !important;
+}
+
+@media screen and (width < 768px) {
+	.technology__intro {
+		display: none;
+	}
+}
+
+// !---> ALL MOBILE SCREENS <---! //
+@media screen and (width <992px) {
+	.technology__box {
+		flex-direction: column;
+	}
+
+	.card__text {
+		text-align: center;
+		font-size: var(--fs-lg);
+	}
+
+	.modal__box {
+		width: 50%;
+	}
+
+	.modal__stats,
+	.intro__stats {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-block: 0.5em;
+		border-bottom: 2px solid grey;
+	}
 }

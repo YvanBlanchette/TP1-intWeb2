@@ -1,19 +1,23 @@
 @use "variables" as *;
 
+#banner-info {
+	margin-bottom: 4rem;
+}
+
 .info {
-	@extend .container !optional;
+	@extend .container;
 	@extend .flex-row-evenly;
 	margin-top: -80px;
 	margin-bottom: 40px;
 	text-align: center;
 
 	.info__title {
-		font-size: $fs-9xl;
+		font-size: var(--fs-9xl);
 		font-weight: $fw-bold;
 	}
 
 	.info__text {
-		font-size: $fs-xl;
+		font-size: var(--fs-xl);
 		font-weight: $fw-bold;
 	}
 }
@@ -25,23 +29,26 @@
 }
 
 .newsletter__title {
-	font-size: $fs-3xl;
+	font-size: var(--fs-3xl);
 	text-transform: uppercase;
 }
 
 .newsletter__text {
-	font-size: $fs-lg;
+	@extend .container;
+	font-size: var(--fs-lg);
+	text-align: center;
 }
 
 form {
 	.form__input-group {
+		@extend .container;
 		@extend .flex-row-center;
-		@extend container;
 		margin-top: 2rem;
 	}
 
 	.form__input {
-		width: $logo-width;
+		width: 60vw;
+		max-width: 500px;
 		margin-left: auto;
 		margin-right: 0;
 		border-radius: 10px 0 0 10px;
@@ -68,10 +75,19 @@ form {
 	}
 }
 
-// !--> MEDIA QUERIES <--! //
+// !---> MEDIA QUERIES <---! //
 @media screen and (width < 1200px) {
 	.newsletter__box {
 		padding-right: 0;
 		padding-top: 2rem;
+	}
+}
+
+// !---> MOBILE PHONES <---! //
+@media screen and (width < 576px) {
+	.info {
+		margin-top: -100px;
+		margin-bottom: 0;
+		text-align: center;
 	}
 }

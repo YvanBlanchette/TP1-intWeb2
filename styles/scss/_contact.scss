@@ -2,7 +2,7 @@
 
 .contact__map-container {
 	width: 100%;
-	height: 900px;
+	height: 1000px;
 	position: relative;
 }
 
@@ -11,40 +11,38 @@
 }
 
 .contact__box {
-	background-color: rgba(0, 0, 0, 0.3);
-	backdrop-filter: blur(5px);
-	box-shadow: $basic-box-shadow;
-	border-radius: 15px;
+	@extend .flex-column-center;
+	background-color: $bg-black-03;
+	backdrop-filter: $blur;
+	box-shadow: $box-backlight--hover--invertedX;
+	border-radius: 15px 0 0 15px;
 	z-index: 100;
 	position: absolute;
-	top: 12%;
-	right: 5%;
-	width: 35%;
-	height: 76%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	top: 50%;
+	right: 0;
+	width: 42%;
+	height: 80%;
 	padding: 2rem;
-	padding-bottom: 0;
-	margin-bottom: 0;
 	color: $white;
+	transform: translateY(-50%) translateX(110%);
+	transition: 500ms ease-out;
 
 	& .contact__title {
-		font-size: 2rem;
-		font-weight: 700;
+		font-size: var(--fs-2xl);
+		font-weight: $fw-bold;
 	}
 }
 
 #contact {
 	padding-bottom: 0;
+
+	&.visible .contact__box {
+		transform: translateY(-50%) translateX(0%);
+	}
 }
 
 #contact .contact__form {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
+	@extend .flex-column-start;
 	width: 100%;
 
 	& .form__input-group {
@@ -57,16 +55,24 @@
 		background-color: transparent;
 		border: none;
 		box-shadow: none;
+		max-width: 100%;
+
+		&.error input,
+		&.error textarea {
+			border: 2px solid rgb(252, 63, 63);
+			box-shadow: 0 0 1px red;
+		}
 	}
 
 	& input,
 	& textarea {
 		width: 100%;
-		border-radius: 5px;
+		border-radius: $border-radius-5;
 		padding: 0.5rem 1rem;
 		border: none;
 		box-shadow: $form-inset;
 		resize: none;
+		color: $black;
 
 		&:focus {
 			outline: none;
@@ -79,8 +85,30 @@
 
 	& .form__btn {
 		width: fit-content;
-		border-radius: 5px;
+		border-radius: $border-radius-5;
 		margin-left: 1rem;
 		margin-top: 0.5rem;
+	}
+}
+
+.form__input .errorMessage {
+	font-size: var(--fs-md);
+	font-weight: $fw-semiBold;
+	color: red;
+	margin-top: 2px;
+	opacity: 0.6;
+}
+
+@media screen and (width < 992px) {
+	.contact__box {
+		right: 0%;
+		bottom: 5%;
+		width: 98%;
+		padding: 1rem;
+	}
+
+	#contact .form__input-group {
+		display: flex;
+		flex-flow: row wrap;
 	}
 }

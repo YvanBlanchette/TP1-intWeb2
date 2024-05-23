@@ -38,15 +38,31 @@
     <div>
 
       <nav class="header__mobile-nav">
-        <button class="nav__mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <button id="mobile-menu-btn" class="nav__mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
       </nav>
-      <nav class="header__nav">
+      <nav id="nav-menu" class="header__nav">
         <ul class="nav__list">
           <li class="nav__list-item"><a class="nav__link" href="#technology">Technologies</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#gallery">Gallerie</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#statistics">Statistiques</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#starbase">Starbase</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#contact">Nous Joindre</a></li>
+          <li class="nav__socials">
+            <ul class="bar__socials-list">
+              <li><a href="https://github.com/yvanblanchette" target="_blank"><i
+                    class="fa-brands fa-github bar__socials-icon"></i></a></li>
+              <li><a href="https://twitter.com/yvanblanchette" target="_blank"><i
+                    class="fa-brands fa-twitter bar__socials-icon"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/yvanblanchette/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in bar__socials-icon"></i></a></li>
+              <li><a href="https://www.instagram.com/yvanblanchette/" target="_blank"><i
+                    class="fa-brands fa-instagram bar__socials-icon"></i></a>
+              </li>
+              <li><a href="https://www.facebook.com/yvanblanchette/" target="_blank"><i
+                    class="fa-brands fa-facebook-f bar__socials-icon"></i></a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -110,7 +126,7 @@
         <form class="form" action="confirmation.html">
           <div class="form__input-group">
             <input class="form__input" type="email" name="email" id="mailing-list_email"
-              placeholder="Inscrire votre adresse email ici...">
+              placeholder="Adresse courriel...">
             <button class="form__btn" type="submit">Rejoindre</button>
           </div>
         </form>
@@ -129,30 +145,35 @@
         </div>
         <div class="intro__box">
           <div>
-
             <h2 class="intro__title">SYSTÈME STARSHIP</h2>
             <h3 class="intro__subtitle">Vers l'orbite terrestre, la Lune, Mars et au-delà!</h3>
 
-            <p intro__text>Le vaisseau spatial Starship de SpaceX et la fusée Super Heavy représentent un système de
+            <p class="intro__text">Le vaisseau spatial Starship de SpaceX et la fusée Super Heavy représentent un
+              système de
               transport
               entièrement
               réutilisable conçu pour transporter à la fois de l'équipage et du fret en orbite terrestre, sur la Lune,
               sur
-              Mars et même au-delà. Starship est le véhicule de lancement le plus puissant jamais développé au monde, il
-              est
-              capable de transporter jusqu'à 150 tonnes métriques.</p>
+              Mars et même au-delà. <span class="d-none d-lg-inline">Starship est le véhicule de lancement le plus
+                puissant
+                jamais développé au monde, il
+                est
+                capable de transporter jusqu'à 150 tonnes métriques.</span></p>
           </div>
-          <div class="intro__stats">
-            <div class="intro__stats-title">HAUTEUR</div>
-            <div class="intro__stats-info"><b>121 m</b> / 397 pi</div>
-          </div>
-          <div class="intro__stats">
-            <div class="intro__stats-title">DIAMÈTRE</div>
-            <div class="intro__stats-info"><b>9 m</b> / 29.5 pi</div>
-          </div>
-          <div class="intro__stats">
-            <div class="intro__stats-title">CAPACITÉ CARGO</div>
-            <div class="intro__stats-info"><b>100 - 150 t</b></div>
+          <div class="d-none d-lg-block">
+
+            <div class="intro__stats">
+              <div class="intro__stats-title">HAUTEUR</div>
+              <div class="intro__stats-info"><b>121 m</b> / 397 pi</div>
+            </div>
+            <div class="intro__stats">
+              <div class="intro__stats-title">DIAMÈTRE</div>
+              <div class="intro__stats-info"><b>9 m</b> / 29.5 pi</div>
+            </div>
+            <div class="intro__stats">
+              <div class="intro__stats-title">CAPACITÉ CARGO</div>
+              <div class="intro__stats-info"><b>100 - 150 t</b></div>
+            </div>
           </div>
         </div>
       </div>
@@ -162,46 +183,57 @@
           <div class="card__image-container">
             <img src="./assets/images/tech1.jpg" class="card__image" alt="Starship">
           </div>
-          <h4 class="card__title">STARSHIP</h4>
-          <div class="card__content">
-            <p class="card__text">
-              Starship est un vaisseau spatial entièrement réutilisable et le deuxième étage du système Starship. Le
-              véhicule se décline en plusieurs configurations différentes, offre une section de charge utile intégrée
-              et
-              est capable de transporter de l'équipage et du fret en orbite terrestre, sur la Lune, sur Mars et même
-              au-delà.<br><br>
-              Starship est également capable de transporter des personnes et de la marchandise d'un point à un autre
-              sur
-              Terre, permettant de se déplacer n'importe où dans le monde en une heure ou moins.</p>
+          <div class="card__body">
+            <h4 class="card__title">STARSHIP</h4>
+            <div class="card__content">
+              <p class="card__text">
+                Starship est un vaisseau spatial entièrement réutilisable et le deuxième étage du système Starship. Le
+                véhicule se décline en plusieurs configurations différentes, offre une section de charge utile intégrée
+                et
+                est capable de transporter de l'équipage et du fret en orbite terrestre, sur la Lune, sur Mars et même
+                au-delà.<br><br>
+                Starship est également capable de transporter des personnes et de la marchandise d'un point à un autre
+                sur
+                Terre, permettant de se déplacer n'importe où dans le monde en une heure ou moins.</p>
+            </div>
           </div>
         </div>
+
         <div class="card" data-bs-toggle="modal" data-bs-target="#superHeavyModal">
           <div class="card__image-container">
             <img src="./assets/images/tech2.jpg" class="card__image" alt="Super Heavy Booster">
           </div>
-          <h4 class="card__title">SUPER HEAVY</h4>
-          <div class="card__content">
-            <p class="card__text">
-              Super Heavy est le premier étage, ou booster, du système de lancement de Starship. Propulsé par 33
-              moteurs Raptor utilisant du méthane liquide (CH4) sub-refroidi et de l'oxygène liquide (LOX).<br><br>
-              Super
-              Heavy est entièrement réutilisable et réintègrera l'atmosphère terrestre pour atterrir de nouveau sur le
-              site de lancement.</p>
+          <div class="card__body">
+            <h4 class="card__title">SUPER HEAVY</h4>
+            <div class="card__content">
+              <p class="card__text">
+                Super Heavy est le premier étage, ou booster, du système de lancement de Starship. Propulsé par 33
+                moteurs Raptor utilisant du méthane liquide (CH4) sub-refroidi et de l'oxygène liquide (LOX).<br><br>
+                Super
+                Heavy est entièrement réutilisable et réintègrera l'atmosphère terrestre pour atterrir de nouveau sur le
+                site de lancement.</p>
+            </div>
           </div>
         </div>
+
         <div class="card" data-bs-toggle="modal" data-bs-target="#raptorEnginesModal">
-          <div class="card__image-container">
-            <img src="./assets/images/tech3.jpg" class="card__image" alt="Raptor engines">
-          </div>
-          <h4 class="card__title">MOTEURS RAPTOR</h4>
-          <div class="card__content">
-            <p class="card__text">
-              Le moteur Raptor est un moteur à combustion étagée réutilisable au méthane et à l'oxygène qui propulse
-              le système Starship et a deux fois la poussée du moteur Merlin du Falcon 9. <br><br>Starship sera propulsé
-              par
-              six moteurs, trois moteurs Raptor et trois moteurs Raptor Vacuum (RVac), conçus pour être utilisés
-              dans le vide de l'espace. Super Heavy sera propulsé par 33 moteurs Raptor, avec 13 au centre et les 20
-              restants autour du périmètre de l'extrémité arrière du booster.</p>
+          <div class="card__wrapper">
+            <div class="card__image-container">
+              <img src="./assets/images/tech3.jpg" class="card__image" alt="Raptor engines">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title">MOTEURS RAPTOR</h4>
+              <div class="card__content">
+                <p class="card__text">
+                  Le moteur Raptor est un moteur à combustion étagée réutilisable au méthane et à l'oxygène qui propulse
+                  le système Starship et a deux fois la poussée du moteur Merlin du Falcon 9. <br><br>Starship sera
+                  propulsé
+                  par
+                  six moteurs, trois moteurs Raptor et trois moteurs Raptor Vacuum (RVac), conçus pour être utilisés
+                  dans le vide de l'espace. Super Heavy sera propulsé par 33 moteurs Raptor, avec 13 au centre et les 20
+                  restants autour du périmètre de l'extrémité arrière du booster.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -248,7 +280,8 @@
     </section>
     <section id="statistics">
       <div class="container">
-        <h2 class="statistics__title">LANCEMENTS ORBITAUX<span class="stats__subtitle">ANNÉE 2023</span></h2>
+        <h2 class="stats__text-title"><span class="font-spacex">SpaceX</span> en
+          Chiffres<span class="stats__subtitle">LANCEMENTS ORBITAUX - ANNÉE 2023</span></h2>
 
         <div class="stats">
 
@@ -268,8 +301,7 @@
 
           </div>
           <div class="stats__text">
-            <h3 class="stats__text-title"><span class="font-spacex">SpaceX</span> en
-              Chiffres</h3>
+
             <p>En 2020, SpaceX a redonné à l'Amérique la capacité de faire voler des astronautes de la NASA vers la
               Station
               spatiale internationale et de les ramener sur terre dans des véhicules américains pour la première fois
@@ -279,12 +311,12 @@
               également transporter des astronautes commerciaux en orbite terrestre, vers la Station spatiale
               internationale
               ou au-delà.</p>
-            <ul>
-              <li><b>Nombre total de lancements en 2023:</b> 98 lancements</li>
-              <li><b>Taux de réussite :</b> 100%</li>
-              <li><b>Masse totale acheminée en orbite :</b> 1 237 085 kg</li>
-              <li><b>Atterrissages au sol :</b> 21 atterrissages</li>
-              <li><b>Atterrissages sur droneship :</b> 77 atterrissages</li>
+            <ul class="stats__list">
+              <li class="stats__list-item"><b>Nombre total de lancements en 2023:</b> 98 lancements</li>
+              <li class="stats__list-item"><b>Taux de réussite :</b> 100%</li>
+              <li class="stats__list-item"><b>Masse totale acheminée en orbite :</b> 1 237 085 kg</li>
+              <li class="stats__list-item"><b>Atterrissages au sol :</b> 21 atterrissages</li>
+              <li class="stats__list-item"><b>Atterrissages sur droneship :</b> 77 atterrissages</li>
             </ul>
 
           </div>
@@ -308,7 +340,7 @@
       <div class="starbase__cards-container">
         <div class="starbase__cards-wrapper">
           <div class="starbase__card">
-            <h3 class="starbase__card-title">SITE DE LANCEMENT ORBITAL</h3>
+            <h3 class="starbase__card-title">SITE LANCEMENT ORBITAL</h3>
             <p>Le site de lancement orbital se compose de trois composants principaux : la ferme de réservoirs orbitaux,
               le support de lancement orbital et la tour d'intégration.</p>
             <p>La ferme de réservoirs orbitaux abrite plusieurs réservoirs horizontaux et verticaux, contenant de
@@ -326,7 +358,7 @@
           </div>
           <div class="starbase__card">
 
-            <h3 class="starbase__card-title">SITE DE LANCEMENT SUBORBITAL</h3>
+            <h3 class="starbase__card-title">SITE LANCEMENT SUBORBITAL</h3>
             <p>Le site de lancement suborbital est l'endroit où ont lieu les tests finaux du vaisseau spatial Starship.
             </p>
             <p>Le site dispose d'un banc d'essai où leS vaisseaux subissent des tests de mise en rotation et de tir
@@ -343,7 +375,7 @@
         <div class="starbase__cards-wrapper">
           <div class="starbase__card">
 
-            <h3 class="starbase__card-title">SITE DE PRODUCTION SANCHEZ</h3>
+            <h3 class="starbase__card-title">SITE PRODUCTION SANCHEZ</h3>
             <p>Le site de production, également connu sous le nom de site de construction, est l'endroit où tous les
               prototypes de Starship et de Super Heavy sont construits et assemblés.</p>
 
@@ -388,15 +420,17 @@
           <p class="contact__text">Si vous avez des questions, des suggestions ou des commentaires, veuillez nous
             envoyer un message
             ci-dessous, et nous vous répondrons dans les plus brefs délais.</p>
-          <form class="contact__form" action="contact-confirmation.html">
+          <form id="form" novalidate class="contact__form" onsubmit="handleSubmit(event)">
             <div class="form__input-group">
               <div class="form__input">
                 <label class="form__label" for="first_name">Prénom</label>
-                <input type="text" name="first_name" id="first_name" placeholder="Prénom..." required>
+                <input type="text" name="first_name" id="first_name" placeholder="Prénom" required>
+                <div class="errorMessage"></div>
               </div>
               <div class="form__input">
                 <label class="form__label" for="last_name">Nom de Famille</label>
-                <input type="text" name="last_name" id="last_name" placeholder="Nom de famille..." required>
+                <input type="text" name="last_name" id="last_name" placeholder="Nom" required>
+                <div class="errorMessage"></div>
               </div>
             </div>
 
@@ -404,6 +438,7 @@
               <div class="form__input">
                 <label class="form__label" for="email">Adresse Courriel</label>
                 <input type="email" name="email" id="email" placeholder="Adresse courriel..." required>
+                <div class="errorMessage"></div>
               </div>
             </div>
 
@@ -411,6 +446,7 @@
               <div class="form__input">
                 <label class="form__label" for="message">Message</label>
                 <textarea name="message" placeholder="Message..." id="message" rows="5" required></textarea>
+                <div class="errorMessage"></div>
               </div>
             </div>
             <input class="form__btn" type="submit" value="Envoyer">
@@ -424,7 +460,7 @@
     <div class="footer_main">
       <div class="footer__logo-container">
         <a href="/">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 36.68" class="footerr__logo">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 36.68" class="footer__logo">
             <path class="cls-1"
               d="m27.17,22.49H7.09v-4.98h25.89c-.68-2.11-2.87-4.08-6.72-4.08H7.47c-4.3,0-6.79,1.58-6.79,5.06v3.7c0,3.02,2.57,4.75,6.34,4.75h20.3v5.28H0c.68,2.87,2.87,4.38,6.79,4.38h20.45c4.3,0,6.42-1.66,6.42-5.21v-3.7c0-3.25-2.49-4.98-6.49-5.21Zm40.98-8.98h-24.75v23.17h7.02v-8.91h18.26c5.06,0,7.85-1.74,7.85-5.81v-2.57c-.08-3.77-3.25-5.89-8.38-5.89Zm2.26,7.4c0,1.66-.3,2.57-3.02,2.57h-16.98l.08-6.04h16.6c3.02,0,3.4.91,3.4,2.49v.98h-.08Zm29.43,6.72h-14.94l-3.7,3.92h21.58l3.7,5.13h8.3l-17.89-24.15-4.23,5.21,7.17,9.89Zm28.38-10.11h26.26c-.68-2.72-3.32-4.08-7.09-4.08h-19.62c-3.4,0-6.64,1.36-6.64,5.06v12.98c0,3.7,3.25,5.06,6.64,5.06h19.85c4.53,0,6.11-1.28,6.87-4.38h-26.26v-14.64Zm57.06,7.7v-3.92h-21.21v15.4h31.32v-4.38h-24.23v-7.09h14.11Zm-20.45-11.7h31.62v4.08h-31.62v-4.08Zm51.09,0h-11.02l12.98,9.51c1.89-1.28,4.08-2.64,6.04-3.77l-8-5.74Zm16,11.85c-1.89,1.28-3.77,2.72-5.58,4.08l9.81,7.17h11.09l-15.32-11.25Z" />
             <path class="cls-1"
@@ -444,7 +480,7 @@
     </div>
     <div class="footer__bar">
       <div class="bar__developper">
-        Conçu et développé par: <a href="https://yvanblanchette.com" class="nav__link">Yvan junior Blanchette</a>
+        Une création de <a href="https://yvanblanchette.com" class="nav__link">Yvan junior Blanchette</a>
       </div>
       <div class="bar__socials">
         <ul class="bar__socials-list">
@@ -474,7 +510,7 @@
 
   <!-- TECHNOLOGY MODALS -->
   <div class="modal fade" id="starshipModal" tabindex="-1" aria-labelledby="starshipModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <div class="modal__image-container">
           <img class="modal__image" src="./assets/images/tech1b.jpg" alt="StarShip">
@@ -482,11 +518,11 @@
         <div class="modal__box">
           <h4 class="modal__title">STARSHIP</h4>
           <p class="modal__text">Starship est le vaisseau spatial entièrement réutilisable et le deuxième étage du
-            système Starship. Le
-            véhicule se décline en plusieurs configurations différentes, offre une section de charge utile intégrée et
-            est capable de transporter l'équipage et le fret en orbite terrestre, sur la Lune, sur Mars et au-delà.
-            Starship est également capable de transporter des personnes et des marchandises d'un point à un autre sur
-            Terre, permettant de se déplacer n'importe où dans le monde en une heure ou moins.</p>
+            système Starship. <span class="d-none d-lg-inline">Le
+              véhicule se décline en plusieurs configurations différentes, offre une section de charge utile intégrée et
+              est capable de transporter l'équipage et le fret en orbite terrestre, sur la Lune, sur Mars et au-delà.
+              Starship est également capable de transporter des personnes et des marchandises d'un point à un autre sur
+              Terre, permettant de se déplacer n'importe où dans le monde en une heure ou moins.</span></p>
           <div class="modal__stats">
             <div class="modal__stats-title">HAUTEUR</div>
             <div class="modal__stats-info"><b>50 m</b> / 165 pi</div>
@@ -515,7 +551,7 @@
 
 
   <div class="modal fade" id="superHeavyModal" tabindex="-1" aria-labelledby="superHeavyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <div class="modal__image-container">
           <img class="modal__image" src="./assets/images/tech2b.jpg" alt="Super Heavy">
@@ -523,10 +559,12 @@
         <div class="modal__box">
           <h4 class="modal__title">SUPER HEAVY</h4>
           <p class="modal__text">Super Heavy est le premier étage, ou booster, du système de lancement de Starship.
-            Propulsé par 33
-            moteurs Raptor utilisant du méthane liquide (CH4) sub-refroidi et de l'oxygène liquide (LOX), Super
-            Heavy est entièrement réutilisable et réintègrera l'atmosphère terrestre pour atterrir de nouveau sur le
-            site de lancement.</p>
+            <span class="d-none d-lg-inline">
+              Propulsé par 33
+              moteurs Raptor utilisant du méthane liquide (CH4) sub-refroidi et de l'oxygène liquide (LOX), Super
+              Heavy est entièrement réutilisable et réintègrera l'atmosphère terrestre pour atterrir de nouveau sur le
+              site de lancement.</span>
+          </p>
           <div class="modal__stats">
             <div class="modal__stats-title">HAUTEUR</div>
             <div class="modal__stats-info"><b>71 m</b> / 232 pi</div>
@@ -552,7 +590,7 @@
 
   <div class="modal fade" id="raptorEnginesModal" tabindex="-1" aria-labelledby="raptorEnginesModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <div style="transform: translate3d(0px 0px 0px); transition-duration: 0ms;" class="modal__image-container">
           <img class="modal__image" src="./assets/images/tech3b.jpg" alt="StarShip">
@@ -561,10 +599,12 @@
           <h4 class="modal__title">MOTEURS RAPTOR</h4>
           <p class="modal__text"> Le moteur Raptor est un moteur à combustion étagée réutilisable au méthane et à
             l'oxygène qui propulse
-            le système Starship et a deux fois la poussée du moteur Merlin du Falcon 9. Starship sera propulsé par
-            six moteurs, trois moteurs Raptor et trois moteurs Raptor Vacuum (RVac), conçus pour être utilisés
-            dans le vide de l'espace. Super Heavy sera propulsé par 33 moteurs Raptor, avec 13 au centre et les 20
-            restants autour du périmètre de l'extrémité arrière du booster.</p>
+            le système Starship<span class="d-none d-lg-inline"> et a deux fois la poussée du moteur Merlin du
+              Falcon 9.
+              Starship sera propulsé par
+              six moteurs, trois moteurs Raptor et trois moteurs Raptor Vacuum (RVac), conçus pour être utilisés
+              dans le vide de l'espace. Super Heavy sera propulsé par 33 moteurs Raptor, avec 13 au centre et les 20
+              restants autour du périmètre de l'extrémité arrière du booster</span>.</p>
           <div class="modal__stats">
             <div class="modal__stats-title">HAUTEUR</div>
             <div class="modal__stats-info"><b>3.1 m</b> / 10.2 pi</div>
@@ -635,9 +675,8 @@
   <!-- STARBASE MODAL -->
   <div class="modal fade" id="starbaseModal" tabindex="-1" aria-labelledby="starbaseModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content">
-        <iframe width="1150" height="680"
-          src="https://www.youtube.com/embed/KQBVOQ79G2s?si=o6ro7DOtnf9ftCGI&amp;controls=0"
+      <div class="modal-content starbase__modal-content">
+        <iframe height="100%" src="https://www.youtube.com/embed/KQBVOQ79G2s?si=o6ro7DOtnf9ftCGI&amp;controls=0"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

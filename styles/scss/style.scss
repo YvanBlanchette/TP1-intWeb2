@@ -9,6 +9,7 @@
 @use "starbase" as *;
 @use "contact" as *;
 @use "footer" as *;
+@use "message-confirmation" as *;
 
 *,
 *::before,
@@ -19,7 +20,7 @@
 html,
 body {
 	overflow-x: hidden !important;
-	background-color: $black;
+	background-color: $white;
 	width: 100vw;
 	scroll-behavior: smooth;
 }
@@ -34,7 +35,12 @@ a {
 }
 
 body {
+	@extend .flex-column;
 	background-image: $bg-img-body;
+}
+
+main {
+	min-height: calc(100vh - $header-height - 152px);
 }
 
 .font-spacex {
@@ -46,11 +52,6 @@ body {
 	display: inline-block;
 	width: 300px;
 	margin-top: -16px;
-}
-
-section {
-	min-height: 500px;
-	padding-bottom: 8rem;
 }
 
 .btn {

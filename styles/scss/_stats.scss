@@ -1,36 +1,32 @@
 @use "variables" as *;
 
+#stats {
+	margin-bottom: 5rem;
+}
+
 .statistics__title {
 	margin-bottom: 3rem;
-	font-size: 3.1rem;
-	font-weight: bold;
+	font-size: var(--fs-3xl);
+	font-weight: $fw-bold;
 	text-align: center;
-
-	.stats__subtitle {
-		display: block;
-		font-size: 2rem;
-		font-weight: 500;
-	}
 }
 
 .stats {
-	display: flex;
-	justify-content: space-between;
-	gap: 3rem;
-
+	@extend .flex-row-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
 	margin-bottom: 5rem;
 }
 
 .stats__chart {
-	display: flex;
-	justify-content: flex-start;
+	@extend .flex-row-start;
+	align-items: flex-start;
 	width: 40%;
 }
 
 .stats__pie-chart {
 	position: relative;
 	width: 300px;
-	height: 300px;
 	background-image: conic-gradient(
 		$black 48%,
 		rgb(223, 32, 32) 48%,
@@ -56,60 +52,93 @@
 }
 
 .stats__info {
-	display: flex;
-	flex-direction: column;
-	align-items: start;
+	@extend .flex-column-start;
 	justify-content: start;
 	width: 400px;
-	height: 400px;
-	list-style: none;
 }
 
 .stats__info-text {
-	font-size: 1.25rem;
-	list-style: none;
+	@extend .flex-row-between;
+	font-size: var(--fs-2lg);
 	width: 120px;
-	display: flex;
-	justify-content: space-between;
+}
+
+%stats__info-text {
+	font-weight: $fw-bold;
 }
 
 .stats__info-text--black {
+	@extend %stats__info-text;
 	color: $black;
-	font-weight: 600;
 }
 
 .stats__info-text--red {
+	@extend %stats__info-text;
 	color: rgb(223, 32, 32);
-	font-weight: 600;
 }
 
 .stats__info-text--blue {
+	@extend %stats__info-text;
 	color: blue;
-	font-weight: 600;
 }
 
 .stats__info-text--yellow {
+	@extend %stats__info-text;
 	color: rgb(223, 200, 0);
-	font-weight: 600;
 }
 
 .stats__info-text--green {
+	@extend %stats__info-text;
 	color: green;
-	font-weight: 600;
 }
 
 .stats__info-text--gray {
+	@extend %stats__info-text;
 	color: gray;
-	font-weight: 600;
+}
+
+.stats__text {
+	flex: 1;
 }
 
 .stats__text-title {
 	margin-bottom: 1rem;
-	font-size: 2.5rem;
-	font-weight: 600;
+	font-size: var(--fs-3xl);
+	font-weight: $fw-bold;
+	text-align: center;
+	margin-bottom: 3rem;
 
 	.stats__subtitle {
 		display: block;
-		font-size: 2.5rem;
+		font-size: var(--fs-xl);
+	}
+}
+
+.stats__list-item {
+	list-style-type: disc;
+}
+
+@media screen and (width < 992px) {
+	.stats {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 3rem;
+	}
+
+	.stats__chart {
+		margin-inline: auto;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 4rem;
+	}
+
+	.stats__pie-chart {
+		width: 200px;
+	}
+
+	.stats__info {
+		width: fit-content;
+		height: fit-content;
+		list-style: none;
 	}
 }

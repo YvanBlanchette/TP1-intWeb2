@@ -6,30 +6,37 @@
 	min-height: 1100px;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	&.visible .starbase__box {
+		transform: translateX(0%);
+	}
 }
 
 .starbase__box {
 	position: absolute;
-	left: 5%;
+	left: 0%;
 	top: 5%;
 	width: 30%;
-	padding: 2rem;
-	border-radius: $base-border-radius;
+	padding: 3rem 2rem;
+	border-radius: 0 15px 15px 0;
 	color: $white;
 	background-color: $bg-black-03;
 	backdrop-filter: $blur;
-	box-shadow: $basic-backlight;
+	box-shadow: $box-backlight;
 	text-shadow: $basic-text-shadow;
+	transform: translateX(-110%);
+	transition: 500ms ease-out;
 
 	.starbase__btn {
+		margin-top: 0.75rem;
 		color: $black;
 		background-color: $white;
 		border: none;
 		padding: 0.5rem 1rem;
 		border-radius: $base-border-radius;
 		transition: 300ms;
-		font-size: 0.9rem;
-		font-weight: 500;
+		font-size: var(--fs-sm);
+		font-weight: $fw-semiBold;
 
 		&:hover {
 			text-shadow: $button-text-backlight--hover;
@@ -40,18 +47,16 @@
 }
 
 .starbase__cards-container {
+	@extend .flex-row-center;
+	align-items: end;
+	gap: 1rem;
 	position: absolute;
 	bottom: 5%;
 	left: 0;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: end;
-	gap: 1rem;
 
 	.starbase__cards-wrapper {
-		display: flex;
-		justify-content: space-evenly;
+		@extend .flex-row-evenly;
 		align-items: end;
 		width: 100%;
 	}
@@ -70,7 +75,7 @@
 	text-shadow: $basic-text-shadow;
 	cursor: pointer;
 	box-shadow: $basic-backlight;
-	transition: $transition;
+	transition: 500ms ease-out;
 
 	&:hover {
 		box-shadow: $box-backlight--hover;
@@ -88,7 +93,6 @@
 		box-shadow: $box-backlight--hover;
 		backdrop-filter: $blur--50;
 		background-color: $bg-black-03;
-
 		opacity: 1;
 
 		& p {
@@ -98,6 +102,27 @@
 	}
 
 	& .starbase__card-title {
-		font-size: 1.3rem;
+		font-size: var(--fs-2lg);
+	}
+}
+
+.starbase__modal-content {
+	aspect-ratio: 2/1;
+}
+
+@media screen and (width < 992px) {
+	#starbase {
+		background-position: bottom center;
+		min-height: 900px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.starbase__box {
+		width: 91%;
+	}
+
+	.starbase__cards-container {
+		display: none;
 	}
 }
