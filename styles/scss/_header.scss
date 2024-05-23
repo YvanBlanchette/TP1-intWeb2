@@ -220,11 +220,11 @@ header {
 	header.scrolled .header__logo-container {
 		background-color: transparent;
 		backdrop-filter: $blur-none;
-		box-shadow: 0;
+		box-shadow: none;
 		transition: $transition;
 
 		&:hover {
-			box-shadow: 0;
+			box-shadow: none;
 		}
 	}
 
@@ -235,11 +235,11 @@ header {
 	header.scrolled nav {
 		background-color: transparent;
 		backdrop-filter: $blur;
-		box-shadow: 0;
+		box-shadow: none;
 		transition: $transition;
 
 		&:hover {
-			box-shadow: 0;
+			box-shadow: none;
 		}
 	}
 
@@ -250,7 +250,7 @@ header {
 		position: relative;
 
 		&:hover {
-			text-shadow: 0;
+			text-shadow: none;
 
 			&::after {
 				width: 100%;

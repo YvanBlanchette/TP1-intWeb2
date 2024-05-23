@@ -43,6 +43,10 @@ main {
 	min-height: calc(100vh - $header-height - 152px);
 }
 
+.sr-only {
+	display: none;
+}
+
 .font-spacex {
 	font-family: "SpaceX";
 	font-weight: 400;
